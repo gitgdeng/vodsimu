@@ -1,0 +1,43 @@
+#ifndef __SERVER_H__
+#define __SERVER_H__
+
+#define MAX_BUFFER_SIZE         1024
+#define MAX_LINE_NUMBER         512
+#define LISTEN_QUEUE_LEN 	5
+
+typedef enum {
+   UNKNOWN = 0, 
+   SETUP,
+   DESCRIBE,
+   PLAY,
+   GET_PARAMETER,
+   TEARDOWN,
+   PAUSE,
+   ANNOUNCE_REPLY
+} rtsp_method_t;
+
+
+typedef enum {
+   ONE_VOD_SERVER = 1, 
+   ONE_MS_SERVER_AND_NCUBE, 
+   ONE_MS_SERVER_AND_ONE_VOD_SERVER, 
+} rtsp_server_modes_t;
+
+typedef enum {
+   DEFAULT_CASE = 0,
+   SETUP_ERROR,
+   SETUP_HAS_TIMEOUT_VALUE_RETURNED,
+
+   DESCRIBE_ERROR,
+
+   PLAY_ERROR,
+   PLAY_NO_RANGE_HEADER,
+
+   GET_PARAMETER_ERROR,
+   ANNOUNCE_EVENT_CODE_OK,
+   ANNOUNCE_EVENT_CODE_ERROR,
+   GET_PARAMETER_ALWAYS_SEND_MSG_BODY,
+   TEARDOWN_ERROR
+} rtsp_testcase_t;
+
+#endif
