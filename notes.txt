@@ -4,3 +4,6 @@ this is the release notes for the vod simulator
  * all the release notes should goes here..
  */
 
+/*
+ * this is the demo of fix bug
+ */
