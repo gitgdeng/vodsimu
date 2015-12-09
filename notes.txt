@@ -7,3 +7,5 @@ this is the release notes for the vod simulator
 /*
  * this is the demo of fix bug
  */
+
+/* this is to add one line on the note */
